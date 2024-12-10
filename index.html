@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #box{
+        height: 300px;
+        width: 300px;
+        background-color: gray;
+        box-shadow: 10px 10px 100px 20px gray;
+        
+    }
+    .section{
+        
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        display: flex;
+        background-color: black;
+    }
+    #box:hover{
+        border-radius: 50%;
+        transition: 3s;
+    }
+
+</style>
+</head>
+<body>
+      <div class="section">
+
+        <div id="box" draggable="true">
+            <script>
+                const sunLight=()=>{
+                    let sun=document.getElementById('box')
+
+                    sun.addEventListener("click",()=>{
+                        sun.style.boxShadow="10px 10px 100px 10px red";
+                        sun.style.backgroundColor="red";
+                        })
+                        sun.addEventListener("dblclick",()=>{
+                            sun.style.boxShadow="10px 10px 100px 10px yellow";
+                            sun.style.backgroundColor="yellow";
+                            })
+                            sun.addEventListener("drag",()=>{
+                                sun.style.boxShadow="10px 10px 100px 10px green";
+                                sun.style.backgroundColor="green";
+                                })
+                            }
+                            sunLight()
+                            </script>
+</body>
+</html>
